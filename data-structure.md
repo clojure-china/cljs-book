@@ -12,6 +12,8 @@
 
 http://clojure.org/reference/sequences
 
+http://clojure-doc.org/articles/language/collections_and_sequences.html
+
 ### List
 
 ### Vector
