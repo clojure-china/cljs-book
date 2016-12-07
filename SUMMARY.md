@@ -6,7 +6,7 @@
 * [数据类型](data-type.md)
 * [数据结构](data-structure.md)
 * [等价](equality.md)
-* [函数](namespace.md)
+* [函数](function.md)
 * [互操作](interop.md)
 * [尾递归](tail-recursion.md)
 * [命名空间](namespace.md)

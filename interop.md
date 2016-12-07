@@ -34,3 +34,7 @@ JavaScript 的全局变量可以通过 `js` 命名空间访问.
 需要复杂的数据结构还有一些复杂的操作, 可以看这篇文章:
 
 http://www.spacjer.com/blog/2014/09/12/clojurescript-javascript-interop/
+
+以及这个视频:
+
+https://lambdaisland.com/episodes/clojurescript-interop

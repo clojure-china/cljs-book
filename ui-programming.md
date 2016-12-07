@@ -2,6 +2,12 @@
 界面编程
 ----
 
-http://reagent-project.github.io/
+基本上都是 React 的绑定:
 
-https://github.com/mvc-works/respo/wiki/Quick-Start
+* Reagnet http://reagent-project.github.io/
+* Om https://github.com/omcljs/om
+* Rum https://github.com/tonsky/rum
+
+或者比如重新实现了 Virtual DOM 的类库:
+
+* Respo http://respo.site/
