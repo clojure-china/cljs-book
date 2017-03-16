@@ -47,5 +47,5 @@
 
 ```clojure
 (f1 1 2)
-(apply (f1 (list 1 2)))
+(apply f1 (list 1 2))
 ```
