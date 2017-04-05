@@ -2,6 +2,8 @@
 ClojureScript 入门指南
 ----
 
+在线版本: http://cljs-book.clj.im
+
 如果你喜欢读英文的教程, 当然有更好的选择:
 
 https://github.com/magomimmo/modern-cljs#introduction
