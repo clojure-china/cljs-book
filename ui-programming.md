@@ -4,7 +4,7 @@
 
 基本上都是 React 的绑定:
 
-* Reagnet http://reagent-project.github.io/
+* Reagent http://reagent-project.github.io/
 * Om https://github.com/omcljs/om
 * Rum https://github.com/tonsky/rum
 

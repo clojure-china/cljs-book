@@ -19,3 +19,4 @@
 * [图形界面](ui-programming.md)
 * [单元测试](testing.md)
 * [JavaScript 模块](js-module.md)
+* [Leiningen + Figwheel + Emacs 配置](lein-figwheel-emacs.md)
