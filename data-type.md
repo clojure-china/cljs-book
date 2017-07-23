@@ -34,16 +34,19 @@ cljs 当中正则的语法是 `#"\\d"` 对应 js 里 `/\d/`.
 
 ```clojure
 (defrecord Address [street city state zip])
+; cljs.user/Address
 ```
 
 实现一个实例:
 
 ```clojure
 (Address. "200 N Mangum" "Durham" "NC" 27701)
+; #cljs.user.Address{:street "200 N Mangum", :city "Durham", :state "NC", :zip 27701}
 ```
 
 由于同时会生成对应的 Macro, 用 `->Address` 也是一样的:
 
 ```clojure
 (->Address "200 N Mangum" "Durham" "NC" 27701)
+; #cljs.user.Address{:street "200 N Mangum", :city "Durham", :state "NC", :zip 27701}
 ```

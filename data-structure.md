@@ -6,7 +6,7 @@
 
 ```clojure
 (first coll)
-(rest col)
+(rest coll)
 (cons item seq)
 ```
 
