@@ -12,11 +12,9 @@ cljs 当中实现了 persistent data structure,
 也就是说, 比如下面这个例子, `b` 在内部实现中就可以复用 `a` 的某些部分
 
 ```clojure
-(def a {
-  :a 1
-  :b 2
-  :c 3
-})
+(def a {:a 1
+        :b 2
+        :c 3})
 
 (def b (assoc a :d 4))
 ```

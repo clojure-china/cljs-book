@@ -16,7 +16,7 @@ cljs 当中正则的语法是 `#"\\d"` 对应 js 里 `/\d/`.
 
 `\d` 本来是字符类型, 在 js 环境中成了 String.
 
-### ClojureScript 带来的类型
+### ClojureScript 其他常用的类型
 
 * Keyword, `:demo`, 或者从 String 生成 `(keyword "demo")`.
 * Symbol, `'demo`, 或者从 String 生成 `(symbol "demo")`.
@@ -25,6 +25,8 @@ cljs 当中正则的语法是 `#"\\d"` 对应 js 里 `/\d/`.
 * List, `'(1 2 3 4)`, 单引号. 也可以写成 `(list 1 2 3 4)`.
 * HashMap, `{:a 1 :b 2}`. 也可以写成 `(hash-map :a 1 :b 2)`.
 * HashSet, `#{1 2 3 4}`, 元素是唯一的. 也可以写成 `(hash-set 1 2 3 4)`.
+
+在 ClojureScript 当中还有其他一些可是使用的列表类型.
 
 ### 自定义类型
 

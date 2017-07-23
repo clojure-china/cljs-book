@@ -2,6 +2,17 @@
 Boot
 ----
 
+Boot 是一个建构工具 http://boot-clj.com/
+
+```bash
+brew install boot-clj
+```
+
+类似 Gulp, 基于 task 进行组合以及运行, 社区有一些常用插件:
+
+https://github.com/boot-clj/boot/wiki/Community-Tasks
+
+
 Boot 通过命令行启动, 通过 `build.boot` 文件配置.
 `build.boot` 实际上是一个 Clojure 脚本, 运行时被读取.
 

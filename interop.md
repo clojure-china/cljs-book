@@ -7,25 +7,25 @@ JavaScript 的全局变量可以通过 `js` 命名空间访问.
 对象的方法调用可以写成:
 
 ```clojure
-(.log js/console "demo)
+(.log js/console "demo) ; console.log('demo')
 ```
 
 访问对象的属性需要添加连字符:
 
 ```clojure
-(.-name obj)
+(.-name obj) ; obj.name
 ```
 
 对象的实例化可以用 cljs 写, 注意结尾有点号:
 
 ```clojure
-(js/Date.)
+(js/Date.) ; new Date()
 ```
 
 当然用 `new` 也不是不可以:
 
 ```clojure
-(new js/Date)
+(new js/Date) ; new Date
 ```
 
 在一般用到 interop 比较局限. 但有时会用到复杂对象.

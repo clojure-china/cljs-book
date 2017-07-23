@@ -1,8 +1,10 @@
 # Summary
 
+## 教程
+
 * [介绍](README.md)
-* [为什么](why.md)
-* [绑定](binding.md)
+* [安装运行](install.md)
+* [变量](variable.md)
 * [数据类型](data-type.md)
 * [数据结构](data-structure.md)
 * [等价](equality.md)
@@ -12,11 +14,14 @@
 * [命名空间](namespace.md)
 * [不可变数据](persistent.md)
 * [可变数据](mutable.md)
-* [Boot](boot.md)
 * [热替换](hot-swap.md)
-* [Leiningen](leiningen.md)
-* [安装](install.md)
-* [图形界面](ui-programming.md)
 * [单元测试](testing.md)
+* [图形界面](ui-programming.md)
 * [JavaScript 模块](js-module.md)
+
+## 其他工具
+
+* [REPL](repl.md)
+* [Boot](boot.md)
+* [Leiningen](leiningen.md)
 * [Leiningen + Figwheel + Emacs 配置](lein-figwheel-emacs.md)
