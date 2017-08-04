@@ -29,4 +29,13 @@ classpath 对应多个路径, 也可能是 jar 包, 而 jar 包中也是源码,
 如果命名空间中存在连字符 `a-b.core`, 文件名需要特殊处理 `a_b/core.cljs`.
 否则编译过程当中会提示错误, 说文件找不到, 其实是特殊字符的坑.
 
-对应命名空间 `a-b.core` 中的全局绑定 `x1`, 可以通过 `a-b.core/x1` 访问.
+当前命名空间的依赖这样写:
+
+```clojure
+(ns demo.core
+  (:require [clojure.string :as string]
+            [clojure.set :refer [dfference]]))
+
+(println (string/blank? ""))
+(println (difference #{:a} #{:b}))
+```

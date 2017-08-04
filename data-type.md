@@ -28,6 +28,63 @@ cljs 当中正则的语法是 `#"\\d"` 对应 js 里 `/\d/`.
 
 在 ClojureScript 当中还有其他一些可是使用的列表类型.
 
+可以用内置函数来判断类型:
+
+```clojure
+(string? "x")
+; true
+(keyword :a)
+; :a
+(number? 1)
+; true
+(boolean? true)
+; true
+(some? nil)
+; false
+(nil? nil)
+; true
+(fn? (fn []))
+; true
+```
+
+### 类型转换
+
+String:
+
+```clojure
+(str :a)
+; ":a"
+(str 1)
+; "1"
+(name :a)
+; "a"
+```
+
+Keyword:
+
+```clojure
+(keyword "a")
+; :a
+```
+
+Boolean:
+
+```clojure
+(boolean "true")
+; true
+(boolean 1)
+; true
+```
+
+Number:
+
+```clojure
+(js/parseInt "11")
+; 11
+(js/parseFloat "11")
+; 11
+```
+
 ### 自定义类型
 
 通过 `defrecord` 可以定义新的类型, 不过本质上是 HashMap:

@@ -26,3 +26,7 @@ Atom 类型的数据可以被监听, 在修改时调用代码:
 (add-watch *a :changes handle-change)
 (remove-watch *a :changes)
 ```
+
+### 宿主语言
+
+另一种模拟可变数据的方式是通过宿主语言的类型系统来提供可变数据.
