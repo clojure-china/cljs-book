@@ -18,6 +18,7 @@
 * [单元测试](testing.md)
 * [图形界面](ui-programming.md)
 * [JavaScript 模块](js-module.md)
+* [Code Splitting](code-splitting.md)
 
 ## 其他工具
 
