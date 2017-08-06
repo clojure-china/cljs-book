@@ -7,7 +7,7 @@ JavaScript 的全局变量可以通过 `js` 命名空间访问.
 对象的方法调用可以写成:
 
 ```clojure
-(.log js/console "demo) ; console.log('demo')
+(.log js/console "demo") ; console.log('demo')
 ```
 
 访问对象的属性需要添加连字符:
