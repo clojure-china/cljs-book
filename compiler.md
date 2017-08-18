@@ -46,5 +46,5 @@ cljs 生成的代码本身针对 Google Closure Compiler 优化, 并且严重依
 另一种办法是把 cljs 的编译器整个编译到 JavaScript, 同时使用 Closure Compiler 的 JavaScript 版本.
 这种情况当中使用的 cljs 称为 Self-hosted ClojureScript, 有时也叫 Bootstraped ClojureScript.
 比如 Planck 和 Lumo 就用了 Self-hosted ClojureScript, 可以使用 Node.js 来编译 cljs.
-使用 Self-hosted cljs 性对而言冷启动较快, 但编译速度较慢, 适合在 REPL 中使用.
+使用 Self-hosted cljs 相对而言冷启动较快, 但编译速度较慢, 适合在 REPL 中使用.
 不过在 Self-hosted cljs 当中某些语言特性的细节会不同, 比如 Macro 的用法等等.
