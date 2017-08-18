@@ -17,6 +17,7 @@
 * [尾递归](tail-recursion.md)
 * [单元测试](testing.md)
 * [图形界面](ui-programming.md)
+* [编译过程](compiler.md)
 * [JavaScript 模块](js-module.md)
 * [Code Splitting](code-splitting.md)
 
