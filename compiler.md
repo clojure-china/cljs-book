@@ -4,6 +4,18 @@
 
 Clojure 语言本身是编译到 JVM Bytecode, 而 ClojureScript 则是编译到 JavaScript.
 
+### Macros
+
+Clojure(Script) 编译过程大概经历三个阶段:
+
+* 读取: 经字符串, 将 Macro 进行展开
+* 分析: 基于读取的符号构建 AST
+* 生成: 产生目标输出, 比如编译到 JavaScript
+
+![](http://farm6.staticflickr.com/5341/7110268565_de4998482b_n_d.jpg)
+
+这个过程对于 Clojure 和 ClojureScript 来说类似, 细节参考 [Compilation Pipeline](http://blog.fogus.me/2012/04/25/the-clojurescript-compilation-pipeline/).
+
 比如这样一段 ClojureScript 代码, [参考 Mike 的文章](http://blog.fikesfarm.com/posts/2017-08-17-closure-compiler-in-planck.html):
 
 ```clojure
@@ -28,7 +40,10 @@ function foo$core$g(long_name) {
 }
 ```
 
-对于生产环境而言, 这个程度的代码是需要优化的, 使用 Google Closure Compiler 进行优化, 可以得到:
+### Google Closure Compiler
+
+对于 JavaScript 而言, 在上线之前仍然需要进行优化, 比如前端常用 Uglify 优化代码体积.
+在 cljs 社区, 普遍使用 Google Closure Compiler 进行优化, 可以做一些更深层的优化, 可以得到:
 
 ```js
 function(a) { return ["abcdef",
@@ -37,8 +52,17 @@ function(a) { return ["abcdef",
 }
 ```
 
-可以看到 cljs 编译器生成的代码可读性并不是那么好, 在使用有些函数的情况下会更加难读.
+可以得到代码被进一步简化了, 甚至部分的代码被预先做了计算.
+
+cljs 编译器生成的代码可读性并不是那么好, 在使用有些函数的情况下会更加难读.
 cljs 生成的代码本身针对 Google Closure Compiler 优化, 并且严重依赖 Dead Code Elimination 功能来控制体积.
+
+Google Closure Compiler 主要有 [4 个编译选项](https://developers.google.com/closure/compiler/docs/compilation_levels#simple_optimizations):
+
+* `:none` 不做任何优化, 不合并文件
+* `:whitespace` 去除空白, 合并文件
+* `:simple` 合并文件, 重命名局部变量
+* `:advanced` 合并文件, 去除无用代码, 压缩混淆代码
 
 由于 Google Closure Compiler 基于 Java 实现, 所以大部分 cljs 编译过程依赖 JVM.
 比如 Lein 和 Boot 就基于 JVM 环境运行, 而 shadow-cljs 会调用系统的 JVM 或者 node-jre.
