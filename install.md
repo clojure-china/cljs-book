@@ -86,10 +86,13 @@ shadow-cljs release app
 
 这里的 `app` 对应配置当中的 build-id `:app`.
 
-### Java
-
 shadow-cljs 运行中需要 Java 环境, 建议在系统当中安装 Java:
 
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
 如果找不到 Java, shadow-cljs 会尝试安装 `node-jre` 模块来提供 Java 环境.
+
+### 其他方案
+
+其他的 REPL 环境还有 planck. 其他 cljs 编译方案也有基于 Boot, Lein, 甚至也可以直接调用 Java API 进行编译.
+如果需要, 可以查询相关资料尝试.
