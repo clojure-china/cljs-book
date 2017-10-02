@@ -65,7 +65,7 @@ Google Closure Compiler 主要有 [4 个编译选项](https://developers.google.
 * `:advanced` 合并文件, 去除无用代码, 压缩混淆代码
 
 由于 Google Closure Compiler 基于 Java 实现, 所以大部分 cljs 编译过程依赖 JVM.
-比如 Lein 和 Boot 就基于 JVM 环境运行, 而 shadow-cljs 会调用系统的 JVM 或者 node-jre.
+比如 Lein 和 Boot 就基于 JVM 环境运行, 而 shadow-cljs 会调用系统的 JVM.
 
 另一种办法是把 cljs 的编译器整个编译到 JavaScript, 同时使用 Closure Compiler 的 JavaScript 版本.
 这种情况当中使用的 cljs 称为 Self-hosted ClojureScript, 有时也叫 Bootstraped ClojureScript.

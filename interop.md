@@ -25,7 +25,7 @@ JavaScript 的全局变量可以通过 `js` 命名空间访问.
 当然用 `new` 也不是不可以:
 
 ```clojure
-(new js/Date) ; new Date
+(new js/Date) ; new Date()
 ```
 
 在一般用到 interop 比较局限. 但有时会用到复杂对象.

@@ -36,11 +36,8 @@ cljs.user=>
 
 ```clojure
 (println "this is a demo")
-
 (println (+ 1 2))
-
 (def a 1)
-
 (println a)
 ```
 
@@ -89,8 +86,6 @@ shadow-cljs release app
 shadow-cljs 运行中需要 Java 环境, 建议在系统当中安装 Java:
 
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-
-如果找不到 Java, shadow-cljs 会尝试安装 `node-jre` 模块来提供 Java 环境.
 
 ### 其他方案
 
