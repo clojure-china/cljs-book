@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "gitbook-plugin-ga": "1.0.1"
+  },
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
   }
 }

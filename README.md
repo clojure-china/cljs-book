@@ -22,3 +22,8 @@ ClojureScript 在不可变数据和 DSL 构造方面的优势使之非常适合�
 ### Contribute
 
 [Fork & PR!](https://github.com/clojure-china/cljs-book)
+
+```bash
+yarn
+yarn gitbook build
+```
