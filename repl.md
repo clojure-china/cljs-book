@@ -4,6 +4,28 @@ REPL
 
 除了 Lumo, 还有其他一些工具提供 REPL.
 
+### Clojure CLI
+
+在 Clojure 1.9 当中有了 CLI 的支持, 可以通过 brew 安装:
+
+```bash
+brew install clojure
+```
+
+创建一个 `deps.edn` 文件, 定义模块依赖:
+
+```edn
+{:deps {org.clojure/clojurescript {:mvn/version "1.9.946"}}}}
+```
+
+通过 `clj` 命令行启动, 使用 `-m` 参数指定默认运行的 module:
+
+```bash
+clj -m cljs.repl.node
+```
+
+[参考 Twitter](https://twitter.com/mfikes/status/939232383626342400).
+
 ### Planck
 
 一个 macOS 环境的 REPL: http://planck-repl.org/
