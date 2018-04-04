@@ -106,7 +106,7 @@ http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.h
 
 最新版本的 ClojureScript 完善了对 clj 命令的支持, 基于 `deps.edn` 文件的依赖:
 
-``edn
+```edn
 {:deps {org.clojure/clojurescript {:mvn/version "1.10.238"}}}
 ```
 
