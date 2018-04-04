@@ -4,13 +4,20 @@ JavaScript 模块
 
 ### 前端
 
-ClojureScript 依赖命名空间, 所以不能直接使用 npm 模块, 甚至 UMD 模块.
-使用前需要做打包处理, 或者通过暴露在 `window` 对象的属性来调用.
-已经打包的模块可以参考:
+shadow-cljs 当中对 npm 模块有比较成熟的支持, 通过 `ns` 可以声明依赖:
 
-http://cljsjs.github.io/
+```clojure
+(ns app.main (:require ["fs" :as fs]))
+
+(fs/readFileSync "package.json" "utf8")
+```
+
+注意这里 `fs/` 用的是 `/` 表示 `fs` 类似命名空间.
+
+旧的教程里会推荐 http://cljsjs.github.io/ 项目, 但是现在建议转用 shadow-cljs 的写法.
+官方的 ClojureScript 对 `:npm-deps` 已经有越来越好的支持, 未来趋向于更好借助 npm 的资源.
 
 ### 后端
 
 使用 Lumo 运行 ClojureScript 脚本时可以通过 `js/require` 调用 npm 模块.
-另外 Figwheel 编译后端代码生成的 js 文件也可以直接使用 `js/require`.
+另外 ClojureScript 编译后端代码生成的 js 文件也可以直接使用 `js/require`.

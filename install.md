@@ -20,10 +20,12 @@ Lumo 借助 V8 的 Snapshot 特性优化了启动速度. 同时支持在运行�
 
 ```bash
 $ lumo
-Lumo 1.4.1
-ClojureScript 1.9.521
-Node.js v7.9.0
+Lumo 1.8.0
+ClojureScript 1.9.946
+Node.js v9.2.0
  Docs: (doc function-name-here)
+       (find-doc "part-of-name-here")
+ Source: (source function-name-here)
  Exit: Control+D or :cljs/quit or exit
 
 cljs.user=> (println "demo")
@@ -45,6 +47,19 @@ cljs.user=>
 
 ```bash
 lumo demo.cljs
+```
+
+Lumo 和 Clojure 一样, 依赖 classpaths 来查找依赖, classpaths 可以是路径或者是 jar 包. 在 Clojure 中可以查看:
+
+```bash
+clj -Spath
+src:/Users/chen/.m2/repository/org/clojure/clojure/1.9.0/clojure-1.9.0.jar:/Users/chen/.m2/repository/org/clojure/spec.alpha/0.1.143/spec.alpha-0.1.143.jar:/Users/chen/.m2/repository/org/clojure/core.specs.alpha/0.1.24/core.specs.alpha-0.1.24.jar
+```
+
+可以看到 `src/` 是默认在搜索路径当中的, 对于 Lumo 使用 classpath 可以这样配合:
+
+```bash
+lumo -c `clj -Spath`
 ```
 
 ### shadow-cljs
@@ -83,9 +98,25 @@ shadow-cljs release app
 
 这里的 `app` 对应配置当中的 build-id `:app`.
 
-shadow-cljs 运行中需要 Java 环境, 建议在系统当中安装 Java:
+shadow-cljs 运行中需要 Java 环境, 需要保证在系统当中安装 Java:
 
 http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+### 通过 clj 启动
+
+最新版本的 ClojureScript 完善了对 clj 命令的支持, 基于 `deps.edn` 文件的依赖:
+
+``edn
+{:deps {org.clojure/clojurescript {:mvn/version "1.10.238"}}}
+```
+
+能够从命令行直接启动 cljs 代码, 打开一个 REPL:
+
+```bash
+clj --main cljs.main --repl
+```
+
+具体步骤参考官网的 Guide 操作 https://clojurescript.org/guides/quick-start
 
 ### 其他方案
 

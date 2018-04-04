@@ -19,6 +19,7 @@
 * [图形界面](ui-programming.md)
 * [编译过程](compiler.md)
 * [JavaScript 模块](js-module.md)
+* [发布模块](publish-module.md)
 * [Code Splitting](code-splitting.md)
 
 ## 其他工具
